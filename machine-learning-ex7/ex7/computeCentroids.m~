@@ -36,8 +36,12 @@ for i = 1:m
 	c{idx(i)} = [ c{idx(i)} i ];
 end
 
+
 for k = 1:K
 	count = size(c{k},2)
+    if count == 0
+        continue;
+    end
 	s = zeros(1, n);	
 	for i = c{k}
 		s = s + X(i,:);

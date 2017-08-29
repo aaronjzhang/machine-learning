@@ -226,7 +226,7 @@ pause;
 % PCA and project the data to 2D
 [U, S] = pca(X_norm);
 Z = projectData(X_norm, U, 2);
-
+size(Z)
 % Plot in 2D
 figure;
 plotDataPoints(Z(sel, :), idx(sel), K);
